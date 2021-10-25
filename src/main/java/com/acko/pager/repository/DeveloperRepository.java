@@ -8,7 +8,7 @@ import java.util.List;
 import java.util.Optional;
 
 public interface DeveloperRepository extends CrudRepository<Developer, Long> {
-    @Query(value="select * from developer d where d.team= :teamId", nativeQuery=true)
+    @Query(value="select * from developer d where d.team_id= :teamId", nativeQuery=true)
     public Optional<List<Developer>> getDevelopersByTeamId(Integer teamId);
 
 }
